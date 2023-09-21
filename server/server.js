@@ -9,7 +9,7 @@ import Connection from './database/db.js';
 import Router from './routes/route.js';
 
 
-app/use(express.static(path.join(__dirname,'../client/build')))
+app.use(express.static(path.join(__dirname,'../client/build')))
 
 
 dotenv.config();
