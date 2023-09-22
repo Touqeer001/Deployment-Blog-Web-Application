@@ -9,7 +9,7 @@ import Connection from './database/db.js';
 import Router from './routes/route.js';
 
 
-app.use(express.static(path.join(__dirname,'./client/build')))
+app.use(express.static(path.join(__dirname,'./build')))
 
 
 dotenv.config();
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', Router);
 
 app.use('*',function(req,res){
-    res.sendFile(path.join(__dirname,'./client/build/index.html'))
+    res.sendFile(path.join(__dirname,'./build/index.html'))
 })
 
 
